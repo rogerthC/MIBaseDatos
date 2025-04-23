@@ -1,0 +1,535 @@
+PS C:\Users\ASUS> mongosh
+Current Mongosh Log ID: 6808c0b52d8d102669b5f898
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.0
+Using MongoDB:          8.0.6
+Using Mongosh:          2.5.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2025-04-23T06:23:34.597-04:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2025-04-23T06:23:34.597-04:00: This server is bound to localhost. Remote systems will be unable to connect to this server. Start the server with --bind_ip <address> to specify which IP addresses it should serve responses from, or with --bind_ip_all to bind to all interfaces. If this behavior is desired, start the server with --bind_ip 127.0.0.1 to disable this warning
+------
+
+test> use MibasedeDatosRogerth
+switched to db MibasedeDatosRogerth
+MibasedeDatosRogerth> db.carreras.insertMany([
+...   { _id: 4, nombre: "Contaduría Pública", duracion: 5 },
+...   { _id: 5, nombre: "Psicología", duracion: 5 },
+...   { _id: 6, nombre: "Derecho", duracion: 5 },
+...   { _id: 7, nombre: "Medicina", duracion: 6 },
+...   { _id: 8, nombre: "Ingeniería Civil", duracion: 5 },
+...   { _id: 9, nombre: "Arquitectura", duracion: 5 },
+...   { _id: 10, nombre: "Marketing", duracion: 4 },
+...   { _id: 11, nombre: "Ingeniería Industrial", duracion: 5 },
+...   { _id: 12, nombre: "Relaciones Internacionales", duracion: 4 },
+...   { _id: 13, nombre: "Filosofía", duracion: 4 },
+...   { _id: 14, nombre: "Ingeniería Eléctrica", duracion: 5 },
+...   { _id: 15, nombre: "Educación Inicial", duracion: 4 },
+...   { _id: 16, nombre: "Trabajo Social", duracion: 4 },
+...   { _id: 17, nombre: "Turismo", duracion: 4 },
+...   { _id: 18, nombre: "Ciencias Políticas", duracion: 4 },
+...   { _id: 19, nombre: "Ingeniería Ambiental", duracion: 5 },
+...   { _id: 20, nombre: "Biotecnología", duracion: 5 },
+...   { _id: 21, nombre: "Diseño de Moda", duracion: 4 },
+...   { _id: 22, nombre: "Enfermería", duracion: 4 },
+...   { _id: 23, nombre: "Ciencias de la Comunicación", duracion: 4 },
+...
+...   // Añadimos 30 carreras más:
+...   { _id: 24, nombre: "Geografía", duracion: 4 },
+...   { _id: 25, nombre: "Historia", duracion: 4 },
+...   { _id: 26, nombre: "Literatura", duracion: 4 },
+...   { _id: 27, nombre: "Biología", duracion: 5 },
+...   { _id: 28, nombre: "Matemáticas", duracion: 5 },
+...   { _id: 29, nombre: "Química", duracion: 5 },
+...   { _id: 30, nombre: "Farmacia", duracion: 5 },
+...   { _id: 31, nombre: "Estudios Ambientales", duracion: 5 },
+...   { _id: 32, nombre: "Medios Audiovisuales", duracion: 4 },
+...   { _id: 33, nombre: "Animación Digital", duracion: 4 },
+...   { _id: 34, nombre: "Cine", duracion: 4 },
+...   { _id: 35, nombre: "Diseño Web", duracion: 4 },
+...   { _id: 36, nombre: "Trabajo de Fin de Carrera", duracion: 4 },
+...   { _id: 37, nombre: "Publicidad", duracion: 4 },
+...   { _id: 38, nombre: "Periodismo", duracion: 4 },
+...   { _id: 39, nombre: "Turismo Sostenible", duracion: 4 },
+...   { _id: 40, nombre: "Gestión Cultural", duracion: 4 },
+...   { _id: 41, nombre: "Gestión de Recursos Humanos", duracion: 4 },
+...   { _id: 42, nombre: "Gestión Empresarial", duracion: 4 },
+...   { _id: 43, nombre: "Logística", duracion: 4 },
+...   { _id: 44, nombre: "Administración de la Salud", duracion: 4 },
+...   { _id: 45, nombre: "Psicopedagogía", duracion: 4 },
+...   { _id: 46, nombre: "Trabajo Social Comunitario", duracion: 4 },
+...   { _id: 47, nombre: "Farmacia y Bioquímica", duracion: 5 },
+...   { _id: 48, nombre: "Ingeniería en Software", duracion: 5 },
+...   { _id: 49, nombre: "Educación Física", duracion: 4 },
+...   { _id: 50, nombre: "Sociología", duracion: 4 }
+... ])
+...
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': 4,
+    '1': 5,
+    '2': 6,
+    '3': 7,
+    '4': 8,
+    '5': 9,
+    '6': 10,
+    '7': 11,
+    '8': 12,
+    '9': 13,
+    '10': 14,
+    '11': 15,
+    '12': 16,
+    '13': 17,
+    '14': 18,
+    '15': 19,
+    '16': 20,
+    '17': 21,
+    '18': 22,
+    '19': 23,
+    '20': 24,
+    '21': 25,
+    '22': 26,
+    '23': 27,
+    '24': 28,
+    '25': 29,
+    '26': 30,
+    '27': 31,
+    '28': 32,
+    '29': 33,
+    '30': 34,
+    '31': 35,
+    '32': 36,
+    '33': 37,
+    '34': 38,
+    '35': 39,
+    '36': 40,
+    '37': 41,
+    '38': 42,
+    '39': 43,
+    '40': 44,
+    '41': 45,
+    '42': 46,
+    '43': 47,
+    '44': 48,
+    '45': 49,
+    '46': 50
+  }
+}
+MibasedeDatosRogerth> db.alumnos.insertMany([
+...   { _id: 1004, nombre: "Pedro Álvarez", edad: 23, carrera_id: 4 },
+...   { _id: 1005, nombre: "María García", edad: 19, carrera_id: 5 },
+...   { _id: 1006, nombre: "Diego Ramírez", edad: 21, carrera_id: 6 },
+...   { _id: 1007, nombre: "Lucía Herrera", edad: 22, carrera_id: 7 },
+...   { _id: 1008, nombre: "Esteban Cruz", edad: 20, carrera_id: 8 },
+...   { _id: 1009, nombre: "Verónica Núñez", edad: 19, carrera_id: 9 },
+...   { _id: 1010, nombre: "Javier Pinto", edad: 24, carrera_id: 10 },
+...   { _id: 1011, nombre: "Carmen Salazar", edad: 21, carrera_id: 11 },
+...   { _id: 1012, nombre: "Roberto Medina", edad: 23, carrera_id: 12 },
+...   { _id: 1013, nombre: "Daniela Paredes", edad: 20, carrera_id: 13 },
+...   { _id: 1014, nombre: "Fernando Ibarra", edad: 25, carrera_id: 14 },
+...   { _id: 1015, nombre: "Tatiana López", edad: 22, carrera_id: 15 },
+...   { _id: 1016, nombre: "Raúl Ortega", edad: 20, carrera_id: 16 },
+...   { _id: 1017, nombre: "Liliana Suárez", edad: 21, carrera_id: 17 },
+...   { _id: 1018, nombre: "Óscar Cárdenas", edad: 24, carrera_id: 18 },
+...   { _id: 1019, nombre: "Gabriela Díaz", edad: 22, carrera_id: 19 },
+...   { _id: 1020, nombre: "Kevin Andrade", edad: 23, carrera_id: 20 },
+...   { _id: 1021, nombre: "Natalia Flores", edad: 19, carrera_id: 21 },
+...   { _id: 1022, nombre: "José Villalobos", edad: 20, carrera_id: 22 },
+...   { _id: 1023, nombre: "Silvana Cornejo", edad: 21, carrera_id: 23 },
+...
+...   // Añadimos los 27 registros restantes para llegar a 50 estudiantes
+...   { _id: 1024, nombre: "Carlos Medina", edad: 22, carrera_id: 4 },
+...   { _id: 1025, nombre: "Martín Díaz", edad: 23, carrera_id: 5 },
+...   { _id: 1026, nombre: "Patricia López", edad: 24, carrera_id: 6 },
+...   { _id: 1027, nombre: "Mónica Ruiz", edad: 25, carrera_id: 7 },
+...   { _id: 1028, nombre: "Sergio González", edad: 19, carrera_id: 8 },
+...   { _id: 1029, nombre: "Lucía Pérez", edad: 20, carrera_id: 9 },
+...   { _id: 1030, nombre: "Elena Sánchez", edad: 21, carrera_id: 10 },
+...   { _id: 1031, nombre: "Juan Pérez", edad: 22, carrera_id: 11 },
+...   { _id: 1032, nombre: "Ana Ruiz", edad: 23, carrera_id: 12 },
+...   { _id: 1033, nombre: "Paula Martínez", edad: 20, carrera_id: 13 },
+...   { _id: 1034, nombre: "Francisco López", edad: 24, carrera_id: 14 },
+...   { _id: 1035, nombre: "Pedro González", edad: 19, carrera_id: 15 },
+...   { _id: 1036, nombre: "Alejandro Romero", edad: 20, carrera_id: 16 },
+...   { _id: 1037, nombre: "Ricardo Pérez", edad: 21, carrera_id: 17 },
+...   { _id: 1038, nombre: "Laura Torres", edad: 22, carrera_id: 18 },
+...   { _id: 1039, nombre: "Rosa García", edad: 23, carrera_id: 19 },
+...   { _id: 1040, nombre: "José María Sánchez", edad: 24, carrera_id: 20 },
+...   { _id: 1041, nombre: "Carla Gómez", edad: 19, carrera_id: 21 },
+...   { _id: 1042, nombre: "Tomás López", edad: 20, carrera_id: 22 },
+...   { _id: 1043, nombre: "Ana María López", edad: 21, carrera_id: 23 },
+...   { _id: 1044, nombre: "Marcos Fernández", edad: 22, carrera_id: 4 },
+...   { _id: 1045, nombre: "Miguel Hernández", edad: 23, carrera_id: 5 },
+...   { _id: 1046, nombre: "Raquel García", edad: 24, carrera_id: 6 },
+...   { _id: 1047, nombre: "Antonio Martínez", edad: 20, carrera_id: 7 },
+...   { _id: 1048, nombre: "Ricardo Sánchez", edad: 21, carrera_id: 8 },
+...   { _id: 1049, nombre: "Gabriela Ruiz", edad: 22, carrera_id: 9 },
+...   { _id: 1050, nombre: "Manuel Rodríguez", edad: 23, carrera_id: 10 }
+... ])
+...
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': 1004,
+    '1': 1005,
+    '2': 1006,
+    '3': 1007,
+    '4': 1008,
+    '5': 1009,
+    '6': 1010,
+    '7': 1011,
+    '8': 1012,
+    '9': 1013,
+    '10': 1014,
+    '11': 1015,
+    '12': 1016,
+    '13': 1017,
+    '14': 1018,
+    '15': 1019,
+    '16': 1020,
+    '17': 1021,
+    '18': 1022,
+    '19': 1023,
+    '20': 1024,
+    '21': 1025,
+    '22': 1026,
+    '23': 1027,
+    '24': 1028,
+    '25': 1029,
+    '26': 1030,
+    '27': 1031,
+    '28': 1032,
+    '29': 1033,
+    '30': 1034,
+    '31': 1035,
+    '32': 1036,
+    '33': 1037,
+    '34': 1038,
+    '35': 1039,
+    '36': 1040,
+    '37': 1041,
+    '38': 1042,
+    '39': 1043,
+    '40': 1044,
+    '41': 1045,
+    '42': 1046,
+    '43': 1047,
+    '44': 1048,
+    '45': 1049,
+    '46': 1050
+  }
+}
+MibasedeDatosRogerth> db.inscripciones.insertMany([
+...   { alumno_id: 1004, materia_id: "MAT105", nota: 7.8 },
+...   { alumno_id: 1005, materia_id: "MAT106", nota: 8.5 },
+...   { alumno_id: 1006, materia_id: "MAT107", nota: 9.2 },
+...   { alumno_id: 1007, materia_id: "MAT108", nota: 6.7 },
+...   { alumno_id: 1008, materia_id: "MAT109", nota: 8.0 },
+...   { alumno_id: 1009, materia_id: "MAT110", nota: 7.3 },
+...   { alumno_id: 1010, materia_id: "MAT111", nota: 9.1 },
+...   { alumno_id: 1011, materia_id: "MAT112", nota: 7.6 },
+...   { alumno_id: 1012, materia_id: "MAT113", nota: 8.4 },
+...   { alumno_id: 1013, materia_id: "MAT114", nota: 9.0 },
+...   { alumno_id: 1014, materia_id: "MAT115", nota: 7.9 },
+...   { alumno_id: 1015, materia_id: "MAT116", nota: 6.5 },
+...   { alumno_id: 1016, materia_id: "MAT117", nota: 8.3 },
+...   { alumno_id: 1017, materia_id: "MAT118", nota: 7.4 },
+...   { alumno_id: 1018, materia_id: "MAT119", nota: 8.2 },
+...   { alumno_id: 1019, materia_id: "MAT120", nota: 7.0 },
+...   { alumno_id: 1020, materia_id: "MAT121", nota: 9.3 },
+...   { alumno_id: 1021, materia_id: "MAT122", nota: 8.6 },
+...   { alumno_id: 1022, materia_id: "MAT123", nota: 7.1 },
+...   { alumno_id: 1023, materia_id: "MAT124", nota: 9.0 },
+...
+...   // Añadimos los 30 registros restantes para llegar a 50 inscripciones
+...   { alumno_id: 1024, materia_id: "MAT125", nota: 8.7 },
+...   { alumno_id: 1025, materia_id: "MAT126", nota: 9.0 },
+...   { alumno_id: 1026, materia_id: "MAT127", nota: 7.8 },
+...   { alumno_id: 1027, materia_id: "MAT128", nota: 8.3 },
+...   { alumno_id: 1028, materia_id: "MAT129", nota: 8.2 },
+...   { alumno_id: 1029, materia_id: "MAT130", nota: 6.9 },
+...   { alumno_id: 1030, materia_id: "MAT131", nota: 7.5 },
+...   { alumno_id: 1031, materia_id: "MAT132", nota: 8.0 },
+...   { alumno_id: 1032, materia_id: "MAT133", nota: 9.1 },
+...   { alumno_id: 1033, materia_id: "MAT134", nota: 8.4 },
+...   { alumno_id: 1034, materia_id: "MAT135", nota: 7.3 },
+...   { alumno_id: 1035, materia_id: "MAT136", nota: 9.2 },
+...   { alumno_id: 1036, materia_id: "MAT137", nota: 8.6 },
+...   { alumno_id: 1037, materia_id: "MAT138", nota: 7.0 },
+...   { alumno_id: 1038, materia_id: "MAT139", nota: 8.9 },
+...   { alumno_id: 1039, materia_id: "MAT140", nota: 7.7 },
+...   { alumno_id: 1040, materia_id: "MAT141", nota: 9.0 },
+...   { alumno_id: 1041, materia_id: "MAT142", nota: 6.8 },
+...   { alumno_id: 1042, materia_id: "MAT143", nota: 7.6 },
+...   { alumno_id: 1043, materia_id: "MAT144", nota: 8.1 },
+...   { alumno_id: 1044, materia_id: "MAT145", nota: 7.5 },
+...   { alumno_id: 1045, materia_id: "MAT146", nota: 9.3 },
+...   { alumno_id: 1046, materia_id: "MAT147", nota: 8.0 },
+...   { alumno_id: 1047, materia_id: "MAT148", nota: 8.4 },
+...   { alumno_id: 1048, materia_id: "MAT149", nota: 6.9 },
+...   { alumno_id: 1049, materia_id: "MAT150", nota: 8.7 },
+...   { alumno_id: 1050, materia_id: "MAT151", nota: 7.2 }
+... ])
+...
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6808c3ea2d8d102669b5f899'),
+    '1': ObjectId('6808c3ea2d8d102669b5f89a'),
+    '2': ObjectId('6808c3ea2d8d102669b5f89b'),
+    '3': ObjectId('6808c3ea2d8d102669b5f89c'),
+    '4': ObjectId('6808c3ea2d8d102669b5f89d'),
+    '5': ObjectId('6808c3ea2d8d102669b5f89e'),
+    '6': ObjectId('6808c3ea2d8d102669b5f89f'),
+    '7': ObjectId('6808c3ea2d8d102669b5f8a0'),
+    '8': ObjectId('6808c3ea2d8d102669b5f8a1'),
+    '9': ObjectId('6808c3ea2d8d102669b5f8a2'),
+    '10': ObjectId('6808c3ea2d8d102669b5f8a3'),
+    '11': ObjectId('6808c3ea2d8d102669b5f8a4'),
+    '12': ObjectId('6808c3ea2d8d102669b5f8a5'),
+    '13': ObjectId('6808c3ea2d8d102669b5f8a6'),
+    '14': ObjectId('6808c3ea2d8d102669b5f8a7'),
+    '15': ObjectId('6808c3ea2d8d102669b5f8a8'),
+    '16': ObjectId('6808c3ea2d8d102669b5f8a9'),
+    '17': ObjectId('6808c3ea2d8d102669b5f8aa'),
+    '18': ObjectId('6808c3ea2d8d102669b5f8ab'),
+    '19': ObjectId('6808c3ea2d8d102669b5f8ac'),
+    '20': ObjectId('6808c3ea2d8d102669b5f8ad'),
+    '21': ObjectId('6808c3ea2d8d102669b5f8ae'),
+    '22': ObjectId('6808c3ea2d8d102669b5f8af'),
+    '23': ObjectId('6808c3ea2d8d102669b5f8b0'),
+    '24': ObjectId('6808c3ea2d8d102669b5f8b1'),
+    '25': ObjectId('6808c3ea2d8d102669b5f8b2'),
+    '26': ObjectId('6808c3ea2d8d102669b5f8b3'),
+    '27': ObjectId('6808c3ea2d8d102669b5f8b4'),
+    '28': ObjectId('6808c3ea2d8d102669b5f8b5'),
+    '29': ObjectId('6808c3ea2d8d102669b5f8b6'),
+    '30': ObjectId('6808c3ea2d8d102669b5f8b7'),
+    '31': ObjectId('6808c3ea2d8d102669b5f8b8'),
+    '32': ObjectId('6808c3ea2d8d102669b5f8b9'),
+    '33': ObjectId('6808c3ea2d8d102669b5f8ba'),
+    '34': ObjectId('6808c3ea2d8d102669b5f8bb'),
+    '35': ObjectId('6808c3ea2d8d102669b5f8bc'),
+    '36': ObjectId('6808c3ea2d8d102669b5f8bd'),
+    '37': ObjectId('6808c3ea2d8d102669b5f8be'),
+    '38': ObjectId('6808c3ea2d8d102669b5f8bf'),
+    '39': ObjectId('6808c3ea2d8d102669b5f8c0'),
+    '40': ObjectId('6808c3ea2d8d102669b5f8c1'),
+    '41': ObjectId('6808c3ea2d8d102669b5f8c2'),
+    '42': ObjectId('6808c3ea2d8d102669b5f8c3'),
+    '43': ObjectId('6808c3ea2d8d102669b5f8c4'),
+    '44': ObjectId('6808c3ea2d8d102669b5f8c5'),
+    '45': ObjectId('6808c3ea2d8d102669b5f8c6'),
+    '46': ObjectId('6808c3ea2d8d102669b5f8c7')
+  }
+}
+MibasedeDatosRogerth> db.estudiantes.find().pretty()
+
+MibasedeDatosRogerth> db.alumnos.find().pretty()
+[
+  { _id: 1004, nombre: 'Pedro Álvarez', edad: 23, carrera_id: 4 },
+  { _id: 1005, nombre: 'María García', edad: 19, carrera_id: 5 },
+  { _id: 1006, nombre: 'Diego Ramírez', edad: 21, carrera_id: 6 },
+  { _id: 1007, nombre: 'Lucía Herrera', edad: 22, carrera_id: 7 },
+  { _id: 1008, nombre: 'Esteban Cruz', edad: 20, carrera_id: 8 },
+  { _id: 1009, nombre: 'Verónica Núñez', edad: 19, carrera_id: 9 },
+  { _id: 1010, nombre: 'Javier Pinto', edad: 24, carrera_id: 10 },
+  { _id: 1011, nombre: 'Carmen Salazar', edad: 21, carrera_id: 11 },
+  { _id: 1012, nombre: 'Roberto Medina', edad: 23, carrera_id: 12 },
+  { _id: 1013, nombre: 'Daniela Paredes', edad: 20, carrera_id: 13 },
+  { _id: 1014, nombre: 'Fernando Ibarra', edad: 25, carrera_id: 14 },
+  { _id: 1015, nombre: 'Tatiana López', edad: 22, carrera_id: 15 },
+  { _id: 1016, nombre: 'Raúl Ortega', edad: 20, carrera_id: 16 },
+  { _id: 1017, nombre: 'Liliana Suárez', edad: 21, carrera_id: 17 },
+  { _id: 1018, nombre: 'Óscar Cárdenas', edad: 24, carrera_id: 18 },
+  { _id: 1019, nombre: 'Gabriela Díaz', edad: 22, carrera_id: 19 },
+  { _id: 1020, nombre: 'Kevin Andrade', edad: 23, carrera_id: 20 },
+  { _id: 1021, nombre: 'Natalia Flores', edad: 19, carrera_id: 21 },
+  { _id: 1022, nombre: 'José Villalobos', edad: 20, carrera_id: 22 },
+  { _id: 1023, nombre: 'Silvana Cornejo', edad: 21, carrera_id: 23 }
+]
+Type "it" for more
+MibasedeDatosRogerth>
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+MibasedeDatosRogerth> db.carreras.find().pretty()
+[
+  { _id: 4, nombre: 'Contaduría Pública', duracion: 5 },
+  { _id: 5, nombre: 'Psicología', duracion: 5 },
+  { _id: 6, nombre: 'Derecho', duracion: 5 },
+  { _id: 7, nombre: 'Medicina', duracion: 6 },
+  { _id: 8, nombre: 'Ingeniería Civil', duracion: 5 },
+  { _id: 9, nombre: 'Arquitectura', duracion: 5 },
+  { _id: 10, nombre: 'Marketing', duracion: 4 },
+  { _id: 11, nombre: 'Ingeniería Industrial', duracion: 5 },
+  { _id: 12, nombre: 'Relaciones Internacionales', duracion: 4 },
+  { _id: 13, nombre: 'Filosofía', duracion: 4 },
+  { _id: 14, nombre: 'Ingeniería Eléctrica', duracion: 5 },
+  { _id: 15, nombre: 'Educación Inicial', duracion: 4 },
+  { _id: 16, nombre: 'Trabajo Social', duracion: 4 },
+  { _id: 17, nombre: 'Turismo', duracion: 4 },
+  { _id: 18, nombre: 'Ciencias Políticas', duracion: 4 },
+  { _id: 19, nombre: 'Ingeniería Ambiental', duracion: 5 },
+  { _id: 20, nombre: 'Biotecnología', duracion: 5 },
+  { _id: 21, nombre: 'Diseño de Moda', duracion: 4 },
+  { _id: 22, nombre: 'Enfermería', duracion: 4 },
+  { _id: 23, nombre: 'Ciencias de la Comunicación', duracion: 4 }
+]
+Type "it" for more
+MibasedeDatosRogerth> db.carreras.countDocuments()
+47
+MibasedeDatosRogerth> db.alumnos.findOne({ _id: 1001 })  // Cambia 1001 por el CI del estudiante
+null
+MibasedeDatosRogerth> db.alumnos.findOne({ _id: 1020 })  // Cambia 1001 por el CI del estudiante
+{ _id: 1020, nombre: 'Kevin Andrade', edad: 23, carrera_id: 20 }
+MibasedeDatosRogerth> db.alumnos.aggregate([
+...   {
+...     $group: {
+...       _id: "$carrera_id",  // Agrupamos por carrera_id
+...       total_estudiantes: { $sum: 1 }  // Contamos los estudiantes en cada carrera
+...     }
+...   },
+...   {
+...     $lookup: {
+...       from: "carreras",
+...       localField: "_id",
+...       foreignField: "_id",
+...       as: "carrera"
+...     }
+...   },
+...   { $unwind: "$carrera" },  // Desenrollamos la información de la carrera
+...   {
+...     $project: {
+...       _id: 0,
+...       carrera: "$carrera.nombre",
+...       total_estudiantes: 1
+...     }
+...   }
+... ])
+...
+[
+  { total_estudiantes: 3, carrera: 'Ingeniería Civil' },
+  { total_estudiantes: 2, carrera: 'Relaciones Internacionales' },
+  { total_estudiantes: 3, carrera: 'Marketing' },
+  { total_estudiantes: 2, carrera: 'Biotecnología' },
+  { total_estudiantes: 2, carrera: 'Ciencias Políticas' },
+  { total_estudiantes: 2, carrera: 'Ingeniería Ambiental' },
+  { total_estudiantes: 2, carrera: 'Turismo' },
+  { total_estudiantes: 2, carrera: 'Educación Inicial' },
+  { total_estudiantes: 3, carrera: 'Contaduría Pública' },
+  { total_estudiantes: 2, carrera: 'Ingeniería Industrial' },
+  { total_estudiantes: 3, carrera: 'Arquitectura' },
+  { total_estudiantes: 2, carrera: 'Filosofía' },
+  { total_estudiantes: 2, carrera: 'Trabajo Social' },
+  { total_estudiantes: 3, carrera: 'Psicología' },
+  { total_estudiantes: 3, carrera: 'Derecho' },
+  { total_estudiantes: 3, carrera: 'Medicina' },
+  { total_estudiantes: 2, carrera: 'Diseño de Moda' },
+  { total_estudiantes: 2, carrera: 'Ingeniería Eléctrica' },
+  { total_estudiantes: 2, carrera: 'Enfermería' },
+  { total_estudiantes: 2, carrera: 'Ciencias de la Comunicación' }
+]
+MibasedeDatosRogerth> db.alumnos.aggregate([
+...   {
+...     $group: {
+...       _id: "$_id",  // Agrupamos por el ID del estudiante
+...       carreras: { $addToSet: "$carrera_id" },  // Acumulamos las carreras
+...       total_carreras: { $sum: 1 }  // Contamos cuántas carreras tiene cada estudiante
+...     }
+...   },
+...   { $match: { total_carreras: { $gt: 1 } } },  // Filtramos estudiantes con más de una carrera
+...   {
+...     $lookup: {
+...       from: "alumnos",
+...       localField: "_id",
+...       foreignField: "_id",
+...       as: "datos"
+...     }
+...   },
+...   { $unwind: "$datos" },
+...   {
+...     $project: {
+...       _id: 0,
+...       ci: "$datos._id",
+...       nombre: "$datos.nombre",
+...       carreras: 1
+...     }
+...   }
+... ])
+...
+
+MibasedeDatosRogerth>
+
+MibasedeDatosRogerth> db.inscripciones.aggregate([
+...   {
+...     $lookup: {
+...       from: "alumnos",
+...       localField: "alumno_id",
+...       foreignField: "_id",
+...       as: "alumno"
+...     }
+...   },
+...   { $unwind: "$alumno" },
+...   {
+...     $lookup: {
+...       from: "carreras",
+...       localField: "alumno.carrera_id",
+...       foreignField: "_id",
+...       as: "carrera"
+...     }
+...   },
+...   { $unwind: "$carrera" },
+...   {
+...     $project: {
+...       _id: 0,
+...       nombre_estudiante: "$alumno.nombre",
+...       carrera: "$carrera.nombre",
+...       pago: 1
+...     }
+...   }
+... ])
+...
+[
+  { nombre_estudiante: 'Pedro Álvarez', carrera: 'Contaduría Pública' },
+  { nombre_estudiante: 'María García', carrera: 'Psicología' },
+  { nombre_estudiante: 'Diego Ramírez', carrera: 'Derecho' },
+  { nombre_estudiante: 'Lucía Herrera', carrera: 'Medicina' },
+  { nombre_estudiante: 'Esteban Cruz', carrera: 'Ingeniería Civil' },
+  { nombre_estudiante: 'Verónica Núñez', carrera: 'Arquitectura' },
+  { nombre_estudiante: 'Javier Pinto', carrera: 'Marketing' },
+  {
+    nombre_estudiante: 'Carmen Salazar',
+    carrera: 'Ingeniería Industrial'
+  },
+  {
+    nombre_estudiante: 'Roberto Medina',
+    carrera: 'Relaciones Internacionales'
+  },
+  { nombre_estudiante: 'Daniela Paredes', carrera: 'Filosofía' },
+  {
+    nombre_estudiante: 'Fernando Ibarra',
+    carrera: 'Ingeniería Eléctrica'
+  },
+  { nombre_estudiante: 'Tatiana López', carrera: 'Educación Inicial' },
+  { nombre_estudiante: 'Raúl Ortega', carrera: 'Trabajo Social' },
+  { nombre_estudiante: 'Liliana Suárez', carrera: 'Turismo' },
+  {
+    nombre_estudiante: 'Óscar Cárdenas',
+    carrera: 'Ciencias Políticas'
+  },
+  {
+    nombre_estudiante: 'Gabriela Díaz',
+    carrera: 'Ingeniería Ambiental'
+  },
+  { nombre_estudiante: 'Kevin Andrade', carrera: 'Biotecnología' },
+  { nombre_estudiante: 'Natalia Flores', carrera: 'Diseño de Moda' },
+  { nombre_estudiante: 'José Villalobos', carrera: 'Enfermería' },
+  {
+    nombre_estudiante: 'Silvana Cornejo',
+    carrera: 'Ciencias de la Comunicación'
+  }
+]
+Type "it" for more
+MibasedeDatosRogerth>
